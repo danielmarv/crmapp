@@ -6,8 +6,8 @@
 <h1>Register</h1>
 <br/>
 
-<form method="POST" action="">
-	{% comment %} {% csrf_token %} {% endcomment %}
+<form method="POST" action="{{ register_user }}">
+	{% csrf_token %}
 	{% if form.errors %}
 			<div class="alert alert-warning alert-dismissible fade show" role="alert">
 			  Your Form Has Errors
